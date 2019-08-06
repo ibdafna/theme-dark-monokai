@@ -1,3 +1,6 @@
+// Copyright (c) Itay B. Dafna.
+// Distributed under the terms of the Modified BSD License.
+
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
@@ -11,7 +14,7 @@ import { IThemeManager } from '@jupyterlab/apputils';
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'theme-dark-monokai:plugin',
   requires: [IThemeManager],
-  activate: function(app: JupyterFrontEnd, manager: IThemeManager) {
+  activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
     const style = 'theme-dark-monokai/index.css';
 
     manager.register({
